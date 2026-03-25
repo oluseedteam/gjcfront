@@ -3,7 +3,7 @@ import { testimonialDatas } from "../data";
 import { swiperOptions2 } from "../data";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore from "swiper";
-import { Navigation, Pagination, Scrollbar, Autoplay } from "swiper/modules";
+import {  Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 

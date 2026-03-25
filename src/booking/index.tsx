@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Layout from "./common/layout";
 import { modalProps } from "../types";
 import { WasteComponent } from "../components/wasteComponent";
@@ -11,7 +11,7 @@ const SelectWaste: React.FC<modalProps> = ({
   text,
   name,
 }): JSX.Element => {
-  const { modalToggle, initialState, setModalToggle } = useModal();
+  const { initialState, setModalToggle } = useModal();
 
   return (
     <>

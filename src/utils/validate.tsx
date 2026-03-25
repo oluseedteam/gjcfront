@@ -25,7 +25,7 @@ export const validateComponent = (data: values) => {
 
   const emptyField = Object.keys(data)
     .map((key) => ({ key: key, value: data[key] }))
-    .find((data) => data.value.trim() == "");
+    .find((data) => data.value.trim() === "");
 
   if (emptyField) {
     err[emptyField.key] = `${emptyField.key} can  not be empty`;

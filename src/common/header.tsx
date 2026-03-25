@@ -1,15 +1,15 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import React, { useRef, useState, useEffect } from "react";
 
-import { BsArrowDownLeftCircleFill } from "react-icons/bs";
 
-import { LogoComponent, LightLogoComponent } from "./logo";
+
+import { LogoComponent} from "./logo";
 import { LinkRoutes } from "../data";
 import { ButtonComponent } from "../components/Tags/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { sidebarVariant, transition } from "../variants";
 import { MdMenu } from "react-icons/md";
-import ScrollIntoView from "react-scroll-into-view";
+
 
 type componentProps = {
   Component?: React.ComponentType;

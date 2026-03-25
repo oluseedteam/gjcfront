@@ -5,8 +5,6 @@ import { ButtonComponent } from "../components/Tags/button";
 import { AllPickups, headerData, buttonStates } from "../data";
 import { useEffect, useState } from "react";
 
-import { values } from "../types";
-
 const Bookings = (): JSX.Element => {
   const [status, setStatus] = useState("all");
   const [contents, setContents] = useState<any[]>(AllPickups);

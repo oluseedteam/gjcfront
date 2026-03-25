@@ -1,8 +1,7 @@
-import React, { ReactNode, useState } from "react";
+import React, { useState } from "react";
 
 import { modalProps } from "../../types";
 
-import { useModal } from "../../context/modal";
 
 import cancel from "../../assets/cancel.png";
 
@@ -18,7 +17,6 @@ const Layout: React.FC<modalProps> = ({
   text,
   name,
 }): JSX.Element => {
-  const { initialState, setModalToggle } = useModal();
   const [action, setAction] = useState<boolean>(false);
   return (
     <>

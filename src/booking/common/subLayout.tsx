@@ -1,8 +1,5 @@
-import React, { ReactNode } from "react";
+import React from "react";
 
-import { modalProps } from "../../types";
-
-import { useModal } from "../../context/modal";
 
 import cancel from "../../assets/cancel.png";
 
@@ -15,7 +12,6 @@ const SubLayout: React.FC<{
   children: JSX.Element;
   type?: "cancel" | "done";
 }> = ({ open, children, setOpen, type }): JSX.Element => {
-  const { initialState, setModalToggle } = useModal();
 
   return (
     <AnimatePresence>

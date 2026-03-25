@@ -1,7 +1,7 @@
 import { modalProps } from "../types";
 import Layout from "./common/layout";
 
-import { InputComponent, SelectComponent } from "../components/Tags/input";
+import { InputComponent } from "../components/Tags/input";
 import { ButtonComponent } from "../components/Tags/button";
 import { useState } from "react";
 import { useModal } from "../context/modal";

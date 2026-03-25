@@ -1,4 +1,4 @@
-import { ReactNode, useRef, useImperativeHandle, useEffect } from "react";
+import { ReactNode } from "react";
 import { pageVariant, transition } from "../variants";
 import { motion } from "framer-motion";
 
@@ -7,7 +7,7 @@ import chat from "../assets/chat.png";
 import Header from "./header";
 import Footer from "./footer";
 
-import { useState } from "react";
+
 
 type layoutProps = {
   children: ReactNode;

@@ -1,5 +1,5 @@
 import Layout from "../common/layout";
-import dispose from "../assets/dispose.png";
+
 import { ParagraphComponent } from "../components/Tags/paragraph";
 import Partners from "../components/partners";
 import Band from "../components/band";
@@ -7,7 +7,7 @@ import SubLayout from "../common/subLayout";
 import Team from "../components/team";
 
 import { aboutData } from "../data";
-import { Heading1Component } from "../components/Tags/heading";
+
 const About = (): JSX.Element => {
   const SectionComponent = () => {
     return (

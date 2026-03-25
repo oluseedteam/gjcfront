@@ -1,6 +1,6 @@
 import { InputComponent } from "../components/Tags/input";
 import { ButtonComponent } from "../components/Tags/button";
-import React, { useState } from "react";
+import React from "react";
 import { values } from "../types";
 
 import { validateComponent } from "../utils/validate";
