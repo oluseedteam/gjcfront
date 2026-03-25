@@ -1,6 +1,5 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import React, { useRef, useState, useEffect } from "react";
-
+import React, { useState, useEffect } from "react";
 
 
 import { LogoComponent} from "./logo";
@@ -19,7 +18,6 @@ type componentProps = {
 const Header = ({ Component }: componentProps): JSX.Element => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
-  const ref = useRef(null);
 
   const [isSticky, setIsSticky] = useState(false);
 

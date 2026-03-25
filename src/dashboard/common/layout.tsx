@@ -94,7 +94,7 @@ const Layout: React.FC<layoutType> = ({
                 src={notificationIcon}
                 alt="notification icon"
               />
-              <img className="w-8" src={icon} alt="profile image" />
+              <img className="w-8" src={icon} alt="profile" />
             </nav>
             <section className="flex items-center justify-between my-3">
               {" "}

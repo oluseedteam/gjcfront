@@ -74,7 +74,7 @@ export const SelectComponent: React.FC<inputProps & selectProps> = ({
   _style,
   options,
 }): JSX.Element => {
-  const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
   return (
@@ -84,6 +84,9 @@ export const SelectComponent: React.FC<inputProps & selectProps> = ({
       </label>
       <select
         className={`${_style} text-sm outline-none p-3 shadow-md`}
+        onChange={(e) => {
+          handleChange(e);
+        }}
         value={values[name]}
         name={name}
       >

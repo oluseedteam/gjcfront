@@ -9,7 +9,7 @@ import { values } from "../types";
 import { RegisterValues } from "../data";
 import { useNavigate } from "react-router";
 
-import { validateComponent } from "../utils/validate";
+
 
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css";
@@ -34,7 +34,6 @@ const Register = (): JSX.Element => {
     const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
       e.preventDefault();
 
-      const validate = validateComponent(values);
 
       setHeading({
         ...heading,

@@ -34,6 +34,7 @@ const Layout = ({
       <div className="fixed z-50 right-0 top-3/4 ">
         <a
           target="_blank"
+          rel="noreferrer noopener"
           href={`https://api.whatsapp.com/send?phone=+2347065911838&text=${encodedText}
        `}
         >

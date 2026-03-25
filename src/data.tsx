@@ -10,12 +10,8 @@ import partner5 from "./assets/partner5.png";
 // waste types images
 import waste1 from "./assets/waste1.png";
 import waste2 from "./assets/waste2.png";
-import waste3 from "./assets/waste3.png";
-import waste4 from "./assets/waste4.png";
-import waste5 from "./assets/waste5.png";
 import waste6 from "./assets/waste6.png";
 import waste7 from "./assets/waste7.png";
-import waste8 from "./assets/waste8.png";
 import waste9 from "./assets/waste9.png";
 import waste10 from "./assets/waste10.png";
 
@@ -48,7 +44,6 @@ import facebook2 from "./assets/facebook2.png";
 import instagram2 from "./assets/instagram2.png";
 import linkedin2 from "./assets/linkedin2.png";
 
-import SwiperOptions from "swiper";
 
 export const LinkRoutes: routeType = [
   {
@@ -710,7 +705,7 @@ export const buttonStates = [
   },
 ];
 
-export const swiperOptions: SwiperOptions = {
+export const swiperOptions: any = {
   centerInsufficientSlides: true,
   slidesPerView: 2,
   spaceBetween: 10,
@@ -732,7 +727,7 @@ export const swiperOptions: SwiperOptions = {
   },
 };
 
-export const swiperOptions2: SwiperOptions = {
+export const swiperOptions2: any = {
   centerInsufficientSlides: true,
   slidesPerView: 1,
   spaceBetween: 10,

@@ -3,7 +3,6 @@ import { ButtonComponent } from "../components/Tags/button";
 import React from "react";
 import { values } from "../types";
 
-import { validateComponent } from "../utils/validate";
 const PasswordComponent: React.FC<{
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
   values: values;
@@ -11,7 +10,6 @@ const PasswordComponent: React.FC<{
 }> = ({ setOpen, values, setValues }): JSX.Element => {
   const createPassword = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    const validate = validateComponent(values);
 
     setOpen(true);
   };
