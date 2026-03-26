@@ -1,4 +1,4 @@
-import React from "react";
+import React, { SyntheticEvent } from "react";
 
 export type routeType = Array<{
   name: string;
@@ -10,6 +10,7 @@ export type buttonProps = {
   clickHandler?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   _style?: string;
   type?: "light" | "dark";
+  action?: "button" | "submit" | "reset";
 };
 
 export type buttonType = {

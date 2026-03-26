@@ -1,21 +1,15 @@
 import { InputComponent } from "../components/Tags/input";
 import { ButtonComponent } from "../components/Tags/button";
-import React from "react";
-import { values } from "../types";
-
+import { useNavigate } from "react-router";
+import React, { useState } from "react";
+import VerifyEmail from "./verifyEmail";
 const PasswordComponent: React.FC<{
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  values: values;
-  setValues: React.Dispatch<React.SetStateAction<values>>;
-}> = ({ setOpen, values, setValues }): JSX.Element => {
-  const createPassword = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-
-    setOpen(true);
-  };
-
+}> = ({ setOpen }): JSX.Element => {
+  const navigate = useNavigate();
+  const [values, setValues] = useState({});
   return (
-    <form className="">
+    <div className="">
       <InputComponent
         _style="  border-[1px] rounded-md  shadow-none p-3 border-[#C2C2C2]"
         values={values}
@@ -29,7 +23,7 @@ const PasswordComponent: React.FC<{
         _style="  border-[1px] rounded-md  shadow-none p-3 border-[#C2C2C2]"
         values={values}
         setValues={setValues}
-        name="confirmPassword"
+        name="password"
         label="Confirm Password"
         type="password"
         placeholder="********"
@@ -37,13 +31,13 @@ const PasswordComponent: React.FC<{
 
       <div className="my-5 gap-5 flex flex-col">
         <ButtonComponent
-          clickHandler={(e) => createPassword(e)}
+          clickHandler={() => setOpen(true)}
           _style="py-4"
           type="dark"
           title="Create Password"
         />
       </div>
-    </form>
+    </div>
   );
 };
 

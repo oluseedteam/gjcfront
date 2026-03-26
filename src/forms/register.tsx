@@ -9,7 +9,7 @@ import { values } from "../types";
 import { RegisterValues } from "../data";
 import { useNavigate } from "react-router";
 
-
+import { validateComponent } from "../utils/validate";
 
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import "swiper/css";
@@ -33,8 +33,6 @@ const Register = (): JSX.Element => {
 
     const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
       e.preventDefault();
-
-
       setHeading({
         ...heading,
         title: "Stage 2",
@@ -71,6 +69,12 @@ const Register = (): JSX.Element => {
         title="Back"
       />
     );
+  };
+
+  const handleSubmit = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    const validate = validateComponent(values);
+    console.log(validate);
   };
 
   const swiperProps = {
@@ -131,11 +135,7 @@ const Register = (): JSX.Element => {
               </form>
             </SwiperSlide>
             <SwiperSlide>
-              <PasswordComponent
-                setValues={setValues}
-                values={values}
-                setOpen={setOpen}
-              />
+              <PasswordComponent setOpen={setOpen} />
               <SwiperPrevButton />
             </SwiperSlide>
           </Swiper>

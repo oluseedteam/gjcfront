@@ -2,14 +2,14 @@ import Layout from "../common/layout";
 import { OverviewComponent } from "../components/overview";
 import { ButtonComponent } from "../components/Tags/button";
 
-import { AllPickups, headerData, buttonStates } from "../data";
+import { UsersData, userHeader, buttonStates } from "../data";
 import { useEffect, useState } from "react";
 
 import { values } from "../types";
 
-const Bookings = (): JSX.Element => {
+const Users = (): JSX.Element => {
   const [status, setStatus] = useState("all");
-  const [contents, setContents] = useState<any[]>(AllPickups);
+  const [contents, setContents] = useState<any[]>(UsersData);
   const statusColor: {
     [key: string]: string;
   } = {
@@ -19,15 +19,15 @@ const Bookings = (): JSX.Element => {
   };
 
   const FilterData = (): any[] => {
-    let data;
-    if (status == "all") data = AllPickups;
-    else {
-      data = AllPickups.filter((data, index) => {
-        return data.status.trim() == status;
-      });
-    }
+    // let data;
+    // if (status == "all") data = UsersData;
+    // else {
+    //   data = UsersData.filter((data, index) => {
+    //     return data.status.trim() == status;
+    //   });
+    // }
 
-    return data;
+    return UsersData;
   };
 
   useEffect(() => {
@@ -38,28 +38,25 @@ const Bookings = (): JSX.Element => {
   const renderData = contents.map((data, index) => {
     return (
       <tr className="text-center border-b p-2 " key={index}>
-        <td className="p-2 md:p-3 font-gsans-light font-medium">
-          {data.bookingId}
-        </td>
-        <td className="p-2 md:p-3 font-gsans-light font-medium">
-          {data.bookingDate}
-        </td>
+        <td className="p-2 md:p-3 font-gsans-light font-medium">{data._id}</td>
         <td className="p-2 md:p-3 font-gsans-light font-medium">{data.name}</td>
         <td className="p-2 md:p-3 font-gsans-light font-medium">
-          {data.location}
-        </td>
-        <td className="p-2 md:p-3 font-gsans-medium font-medium">
-          {data.phone}
-        </td>
-        <td className="p-2 md:p-3 font-gsans-light font-medium">
-          {data.pickupDate}
+          {data.email}
         </td>
         <td
-          className={`p-2 md:p-3 ${
-            statusColor[data.status.trim()]
-          } font-gsans-light font-medium`}
+          style={{ whiteSpace: "nowrap" }}
+          className="p-2 md:p-3 font-gsans-light font-medium"
         >
-          {data.status}
+          {data.phone}
+        </td>
+        <td
+          style={{ whiteSpace: "nowrap" }}
+          className="p-2 md:p-3 font-gsans-medium font-medium"
+        >
+          {data.totalOrder}
+        </td>
+        <td className="p-2 md:p-3 font-gsans-light font-medium">
+          {data.pendingOrder}
         </td>
       </tr>
     );
@@ -85,7 +82,7 @@ const Bookings = (): JSX.Element => {
           <table className="  my-2  table-auto w-full ">
             <thead>
               <tr style={{ whiteSpace: "nowrap" }} className="p-3 bg-[#F8FDF9]">
-                {headerData.map((data, index) => {
+                {userHeader.map((data, index) => {
                   return (
                     <th key={index} className=" p-3 border-r-2">
                       {data}
@@ -102,4 +99,4 @@ const Bookings = (): JSX.Element => {
   );
 };
 
-export default Bookings;
+export default Users;

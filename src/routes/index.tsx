@@ -2,18 +2,20 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 // Pages import
-import HomePage from "../pages";
-import Blog from "../pages/portfolio";
-import Contact from "../pages/contact";
-import About from "../pages/about";
+
 import Register from "../forms/register";
 import Login from "../forms/login";
 
 import Dashboard from "../dashboard/index";
+import Bookings from "../dashboard/bookings";
 import Profile from "../dashboard/profile";
 import Booking from "../dashboard/bookings";
+import Users from "../dashboard/users";
 
 import ResetAuth from "../forms/reset";
+import Items from "../dashboard/items";
+import Areas from "../dashboard/areas";
+import Admins from "../dashboard/admin";
 
 const Routes = (): JSX.Element => {
   type routeProps = Array<{
@@ -22,23 +24,6 @@ const Routes = (): JSX.Element => {
   }>;
 
   const pageRoutes: routeProps = [
-    {
-      path: "/",
-      element: <HomePage />,
-    },
-    {
-      path: "/blog",
-      element: <Blog />,
-    },
-    {
-      path: "/about",
-      element: <About />,
-    },
-
-    {
-      path: "/contact",
-      element: <Contact />,
-    },
     {
       path: "/register",
       element: <Register />,
@@ -56,6 +41,10 @@ const Routes = (): JSX.Element => {
 
   const DashboardRoutes = [
     {
+      path: "/",
+      element: <Dashboard />,
+    },
+    {
       path: "/dashboard",
       children: [
         {
@@ -69,6 +58,26 @@ const Routes = (): JSX.Element => {
         {
           path: "profile",
           element: <Profile />,
+        },
+        {
+          path: "users",
+          element: <Users />,
+        },
+        {
+          path: "items",
+          element: <Items />,
+        },
+        {
+          path: "areas",
+          element: <Areas />,
+        },
+        {
+          path: "admins",
+          element: <Admins />,
+        },
+        {
+          path: "users",
+          element: <Users />,
         },
       ],
     },

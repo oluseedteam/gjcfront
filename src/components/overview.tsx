@@ -1,7 +1,8 @@
-import { OverviewData } from "../../data";
-import overviewBg from "../../assets/overviewBg.png";
-import credit from "../../assets/vector1.png";
-import debit from "../../assets/vector2.png";
+import { OverviewData } from "../data";
+
+import overviewBg from "../assets/overviewBg.png";
+import credit from "../assets/vector1.png";
+import debit from "../assets/vector2.png";
 export const OverviewComponent = (): JSX.Element => {
   const renderOverview = OverviewData.map((data, index) => {
     return (
@@ -16,7 +17,7 @@ export const OverviewComponent = (): JSX.Element => {
           </h1>
           <div className="my-4 flex items-center gap-3">
             <p>{data.percent}</p>
-            <img src={data.type === "credit" ? credit : debit} alt="" />
+            <img src={data.type === "credit" ? credit : debit} />
           </div>
         </div>
       </div>

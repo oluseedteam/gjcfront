@@ -7,11 +7,17 @@ import React, {
 } from "react";
 
 type toggleProps = {
-  selectOpen: boolean;
-  bookingOpen: boolean;
-  otpOpen: boolean;
-  reviewOpen: boolean;
+  areaOpen: boolean;
+  itemOpen: boolean;
+  userOpen: boolean;
+  cancelOpen: boolean;
+  doneOpen: boolean;
+  successText: string;
+  editItem: boolean;
+  editUser: boolean;
+  editArea: boolean;
 };
+
 type modalContextProps = {
   modalToggle: toggleProps;
   setModalToggle: React.Dispatch<React.SetStateAction<toggleProps>>;
@@ -19,10 +25,15 @@ type modalContextProps = {
 };
 
 const initialState = {
-  selectOpen: false,
-  bookingOpen: false,
-  otpOpen: false,
-  reviewOpen: false,
+  areaOpen: false,
+  itemOpen: false,
+  userOpen: false,
+  cancelOpen: false,
+  doneOpen: false,
+  successText: "",
+  editItem: false,
+  editUser: false,
+  editArea: false,
 };
 const ModalContext = createContext<modalContextProps>({
   modalToggle: initialState,

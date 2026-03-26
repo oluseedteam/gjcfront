@@ -1,3 +1,4 @@
+import { useModal } from "../context/modal";
 import { WastesData } from "../data";
 import { values } from "../types";
 import { ImageComponent } from "./Tags/image";
@@ -9,19 +10,25 @@ export const WasteComponent = ({
   _style?: string;
   Data?: Array<values>;
 }): JSX.Element => {
+  const { setModalToggle, initialState, modalToggle } = useModal();
+
+  const handleSubmit = (data: values) => {
+    setModalToggle({ ...initialState, editItem: true });
+  };
   return (
-    <section className={`${_style}  gap-6  `}>
-      {Data.map(({ name, img }, index) => {
+    <section className={`${_style}  -z-50 gap-6  `}>
+      {Data.map((data, index) => {
         return (
           <div
-            className="bg-secondary    flex flex-col justify-between   "
+            onClick={() => handleSubmit(data)}
+            className="bg-secondary  cursor-pointer  flex flex-col justify-between   "
             key={index}
           >
             <div className="p-5">
-              <ImageComponent _style="w-44" src={img} />
+              <ImageComponent src={data.img} />
             </div>
             <p className="bg-primarySm capitalize text-center text-light p-3">
-              {name}
+              {data.name}
             </p>
           </div>
         );

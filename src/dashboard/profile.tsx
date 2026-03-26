@@ -1,4 +1,4 @@
-import Layout from "./common/layout";
+import Layout from "../common/layout";
 import { InputComponent, SelectComponent } from "../components/Tags/input";
 import { ButtonComponent } from "../components/Tags/button";
 import React, { useState } from "react";
@@ -56,7 +56,7 @@ const Profile = (): JSX.Element => {
       <section>
         <div className="flex  my-3 justify-between">
           <div className="relative">
-            <img src={profileImg} alt="profile" />
+            <img src={profileImg} alt="profile image" />
             <label
               className="absolute right-3 bottom-0"
               htmlFor="profile_image"

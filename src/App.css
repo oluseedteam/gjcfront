@@ -78,9 +78,9 @@ body {
   order: 1;
 }
 .modal-backdrop {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
-  /* opacity: 0.1; */
+  z-index: 10;
   top: 0;
   bottom: 0;
   left: 0;
@@ -89,11 +89,11 @@ body {
 .modal-backdrop2 {
   background-color: rgba(0, 0, 0, 1);
   position: fixed;
-  /* opacity: 0.1; */
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 30;
 }
 .is-sticky {
   position: fixed;
@@ -120,4 +120,8 @@ body {
     background-position-x: 0rem, 5rem, 10rem;
     background-position-y: 0rem, 130%, 130%;
   }
+}
+
+td {
+  white-space: nowrap !important;
 }

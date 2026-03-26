@@ -1,13 +1,14 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
+import formBg from "../assets/pattern.png";
+
+import ellipse1 from "../assets/ellipse1.png";
+import ellipse2 from "../assets/ellipse2.png";
 
 import { Heading1Component } from "../components/Tags/heading";
 import { ParagraphComponent } from "../components/Tags/paragraph";
 
 import { motion } from "framer-motion";
 import { pageVariant, transition } from "../variants";
-import { NavLink } from "react-router-dom";
-
-import { MdKeyboardBackspace } from "react-icons/md";
 
 type layoutProp = {
   children: JSX.Element;
@@ -33,7 +34,7 @@ const Layout: React.FC<layoutProp> = ({
       >
         <section
           // style={{ backgroundImage: `url(${formBg})` }}
-          className="bg-primary flex flex-col form-layout relative md:rounded-e-md flex-1  p-4   md:p-10"
+          className="bg-primary form-layout relative md:rounded-e-md flex-1  p-4   md:p-10"
         >
           <div className="max-w-sm">
             <Heading1Component _style="my-5" text="GJC  Recycling" />
@@ -42,10 +43,6 @@ const Layout: React.FC<layoutProp> = ({
               text="Lorem ipsum dolor sit amet consectetur. Tincidunt ipsum enim "
             />
           </div>
-          <NavLink className="my-5 flex items-center gap-4" to="/">
-            <MdKeyboardBackspace />{" "}
-            <span className="font-mono"> Go To Home</span>
-          </NavLink>
         </section>
         <section className="flex-1  flex flex-col md:items-center  md:px-20 justify-center ">
           <div className="text-dark  md:p-10 p-4 rounded-2xl  bg-light">

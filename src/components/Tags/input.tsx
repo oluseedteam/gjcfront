@@ -1,5 +1,6 @@
 import { ChangeEvent } from "react";
 import { inputProps } from "../../types";
+
 export const InputComponent: React.FC<inputProps> = ({
   label,
   type = "text",
@@ -18,7 +19,7 @@ export const InputComponent: React.FC<inputProps> = ({
         {label}
       </label>
       <input
-        className={`${_style} text-sm outline-none p-2 shadow-md`}
+        className={`${_style} border-[1px] rounded-md  shadow-none p-3 border-[#C2C2C2] text-sm outline-none `}
         onChange={(e) => {
           handleChange(e);
         }}
@@ -74,7 +75,7 @@ export const SelectComponent: React.FC<inputProps & selectProps> = ({
   _style,
   options,
 }): JSX.Element => {
-  const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
   return (
@@ -83,10 +84,7 @@ export const SelectComponent: React.FC<inputProps & selectProps> = ({
         {label}
       </label>
       <select
-        className={`${_style} text-sm outline-none p-3 shadow-md`}
-        onChange={(e) => {
-          handleChange(e);
-        }}
+        className={`${_style}  border-[1px] rounded-md  shadow-none p-3 border-[#C2C2C2] text-sm outline-none`}
         value={values[name]}
         name={name}
       >
