@@ -2,7 +2,7 @@ import { InputComponent } from "../components/Tags/input";
 import { ButtonComponent } from "../components/Tags/button";
 import { useNavigate } from "react-router";
 import React, { useState } from "react";
-import VerifyEmail from "./verifyEmail";
+
 const PasswordComponent: React.FC<{
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }> = ({ setOpen }): JSX.Element => {

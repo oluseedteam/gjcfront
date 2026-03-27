@@ -1,4 +1,3 @@
-import Layout from "./layout";
 import { InputComponent } from "../components/Tags/input";
 import { ButtonComponent } from "../components/Tags/button";
 
@@ -8,7 +7,7 @@ import { values } from "../types";
 
 import { RegisterValues } from "../data";
 import { useNavigate } from "react-router";
-import { NavLink } from "react-router-dom";
+
 
 const ResetPassword = (): JSX.Element => {
   const [values, setValues] = useState<values>(RegisterValues);

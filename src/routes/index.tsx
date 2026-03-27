@@ -7,7 +7,6 @@ import Register from "../forms/register";
 import Login from "../forms/login";
 
 import Dashboard from "../dashboard/index";
-import Bookings from "../dashboard/bookings";
 import Profile from "../dashboard/profile";
 import Booking from "../dashboard/bookings";
 import Users from "../dashboard/users";

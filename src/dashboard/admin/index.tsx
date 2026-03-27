@@ -4,7 +4,7 @@ import { ButtonComponent } from "../../components/Tags/button";
 
 import EditAdmin from "./edit";
 import { useModal } from "../../context/modal";
-import { useState } from "react";
+
 import { values } from "../../types";
 
 const Admin = (): JSX.Element => {

@@ -5,7 +5,7 @@ import { SidebarLinks } from "../data";
 import { GoHomeFill, GoPersonFill } from "react-icons/go";
 import { BsPeopleFill } from "react-icons/bs";
 import { MdOutlineLogout, MdOutlineSettings } from "react-icons/md";
-import { IoSettingsOutline, IoLocationOutline } from "react-icons/io5";
+import { IoLocationOutline } from "react-icons/io5";
 
 import item1 from "../assets/item1.png";
 import item2 from "../assets/item2.png";
@@ -46,7 +46,7 @@ const Links = () => {
       <NavLink
         key={data.name}
         className={`text-base flex items-center gap-3 p-3 w-full rounded-s-xl ${
-          data.path == path ? linkState.active : linkState.inactive
+          data.path === path ? linkState.active : linkState.inactive
         } `}
         to={data.path}
       >

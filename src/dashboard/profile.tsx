@@ -5,7 +5,6 @@ import React, { useState } from "react";
 import { values } from "../types";
 import uploadBtn from "../assets/uploadbtn.png";
 import profileImg from "../assets/profileImg.png";
-
 import { LanguageData } from "../data";
 
 type UpdateProps = {

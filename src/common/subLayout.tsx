@@ -1,7 +1,3 @@
-import React, { ReactNode } from "react";
-
-import { modalProps } from "../types";
-
 import { useModal } from "../context/modal";
 
 import cancel from "../assets/cancel.png";

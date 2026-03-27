@@ -1,11 +1,8 @@
 import Layout from "../common/layout";
-import { OverviewComponent } from "../components/overview";
 import { ButtonComponent } from "../components/Tags/button";
 
 import { AllPickups, headerData, buttonStates } from "../data";
 import { useEffect, useState } from "react";
-
-import { values } from "../types";
 
 const Bookings = (): JSX.Element => {
   const [status, setStatus] = useState("all");
@@ -20,10 +17,10 @@ const Bookings = (): JSX.Element => {
 
   const FilterData = (): any[] => {
     let data;
-    if (status == "all") data = AllPickups;
+    if (status === "all") data = AllPickups;
     else {
       data = AllPickups.filter((data, index) => {
-        return data.status.trim() == status;
+        return data.status.trim() === status;
       });
     }
 
@@ -73,7 +70,7 @@ const Bookings = (): JSX.Element => {
             return (
               <ButtonComponent
                 key={index}
-                type={data.status.trim() == status ? "dark" : "light"}
+                type={data.status.trim() === status ? "dark" : "light"}
                 clickHandler={() => setStatus(data.status)}
                 _style="md:px-2 px-1 border-[1px] border-primary"
                 title={data.name}

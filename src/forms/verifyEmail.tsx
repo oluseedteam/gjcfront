@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import SubLayout from "../common/subLayout";
 import { ButtonComponent } from "../components/Tags/button";
 const VerifyEmail: React.FC<{

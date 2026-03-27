@@ -10,7 +10,7 @@ export const WasteComponent = ({
   _style?: string;
   Data?: Array<values>;
 }): JSX.Element => {
-  const { setModalToggle, initialState, modalToggle } = useModal();
+  const { setModalToggle, initialState } = useModal();
 
   const handleSubmit = (data: values) => {
     setModalToggle({ ...initialState, editItem: true });
@@ -21,7 +21,7 @@ export const WasteComponent = ({
         return (
           <div
             onClick={() => handleSubmit(data)}
-            className="bg-secondary  cursor-pointer  flex flex-col justify-between   "
+            className="bg-secondary  cursor-pointer  flex flex-col justify-between"
             key={index}
           >
             <div className="p-5">

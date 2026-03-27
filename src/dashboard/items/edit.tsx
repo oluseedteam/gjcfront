@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import SubLayout from "../../common/subLayout";
 import { InputComponent } from "../../components/Tags/input";
 import { ButtonComponent } from "../../components/Tags/button";
-
 import { useModal } from "../../context/modal";
-
-import thumbnail from "../../assets/thumbnail.png";
 import uploadBtn from "../../assets/uploadbtn.png";
 import waste3 from "../../assets/waste3.png";
 

@@ -17,7 +17,7 @@ export const OverviewComponent = (): JSX.Element => {
           </h1>
           <div className="my-4 flex items-center gap-3">
             <p>{data.percent}</p>
-            <img src={data.type === "credit" ? credit : debit} />
+            <img src={data.type === "credit" ? credit : debit} alt="credit" />
           </div>
         </div>
       </div>

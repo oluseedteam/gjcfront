@@ -1,52 +1,20 @@
-import { routeType, buttonType, methodProps, values } from "./types";
+import { routeType, buttonType, values } from "./types";
 
 // partners logo
-import partner1 from "./assets/partner1.png";
-import partner2 from "./assets/partner2.png";
-import partner3 from "./assets/partner3.png";
-import partner4 from "./assets/partner4.png";
-import partner5 from "./assets/partner5.png";
+
 
 // waste types images
 import waste1 from "./assets/waste1.png";
 import waste2 from "./assets/waste2.png";
-import waste3 from "./assets/waste3.png";
-import waste4 from "./assets/waste4.png";
-import waste5 from "./assets/waste5.png";
+
 import waste6 from "./assets/waste6.png";
 import waste7 from "./assets/waste7.png";
-import waste8 from "./assets/waste8.png";
+
 import waste9 from "./assets/waste9.png";
 import waste10 from "./assets/waste10.png";
 
 // collection methods images
-import collection1 from "./assets/collection1.png";
-import collection2 from "./assets/collection2.png";
-import collection3 from "./assets/collection3.png";
 
-import testimonial from "./assets/small_img.png";
-
-import envelope from "./assets/envelope.png";
-import phone from "./assets/phone.png";
-
-// social media icons
-import twitter from "./assets/twitter.png";
-import facebook from "./assets/facebook.png";
-import instagram from "./assets/instagram.png";
-import linkedin from "./assets/linkedin.png";
-
-import dispose from "./assets/dispose.png";
-
-import team from "./assets/team.png";
-
-import envelope2 from "./assets/envelope2.png";
-import phone2 from "./assets/phone2.png";
-
-// social media icons
-import twitter2 from "./assets/twitter2.png";
-import facebook2 from "./assets/facebook2.png";
-import instagram2 from "./assets/instagram2.png";
-import linkedin2 from "./assets/linkedin2.png";
 
 import SwiperOptions from "swiper";
 

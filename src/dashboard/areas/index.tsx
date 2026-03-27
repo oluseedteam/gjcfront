@@ -1,7 +1,6 @@
 import Layout from "../../common/layout";
 import { useModal } from "../../context/modal";
 import { CoverAreaDatas } from "../../data";
-import { values } from "../../types";
 
 const Areas = (): JSX.Element => {
   const { setModalToggle, initialState } = useModal();

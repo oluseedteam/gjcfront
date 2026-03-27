@@ -1,7 +1,6 @@
 import React from "react";
 import SubLayout from "../common/subLayout";
 import { useModal } from "../context/modal";
-
 import mask from "../assets/mask.png";
 import danger from "../assets/danger.png";
 import { ButtonComponent } from "../components/Tags/button";

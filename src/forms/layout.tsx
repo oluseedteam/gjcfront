@@ -1,8 +1,4 @@
-import React, { PropsWithChildren } from "react";
-import formBg from "../assets/pattern.png";
-
-import ellipse1 from "../assets/ellipse1.png";
-import ellipse2 from "../assets/ellipse2.png";
+import React from "react";
 
 import { Heading1Component } from "../components/Tags/heading";
 import { ParagraphComponent } from "../components/Tags/paragraph";
