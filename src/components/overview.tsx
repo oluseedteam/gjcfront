@@ -3,7 +3,7 @@ import { OverviewData } from "../data";
 import overviewBg from "../assets/overviewBg.png";
 import credit from "../assets/vector1.png";
 import debit from "../assets/vector2.png";
-export const OverviewComponent = (): JSX.Element => {
+export const OverviewComponent = (): React.ReactNode => {
   const renderOverview = OverviewData.map((data, index) => {
     return (
       <div

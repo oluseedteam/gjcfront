@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { pageVariant, transition } from "../variants";
 
 type layoutProp = {
-  children: JSX.Element;
+  children: React.ReactNode;
   title?: string;
   text?: string;
   subTitle?: string;
@@ -18,7 +18,7 @@ const Layout: React.FC<layoutProp> = ({
   text,
   title,
   subTitle,
-}): JSX.Element => {
+}): React.ReactNode => {
   return (
     <>
       <motion.main
@@ -26,7 +26,7 @@ const Layout: React.FC<layoutProp> = ({
         initial="initial"
         animate="animate"
         transition={transition}
-        className="md:flex text-white bg-[#FFFCF2]  md:h-screen overflow-y-hidden  "
+        className="md:flex text-white bg-[#FFFC00] md:h-screen overflow-y-hidden"
       >
         <section
           // style={{ backgroundImage: `url(${formBg})` }}

@@ -9,7 +9,7 @@ export const InputComponent: React.FC<inputProps> = ({
   name,
   placeholder,
   _style,
-}): JSX.Element => {
+}): React.ReactNode => {
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
@@ -39,7 +39,7 @@ export const TextAreaComponent: React.FC<inputProps> = ({
   name,
   placeholder,
   _style,
-}): JSX.Element => {
+}): React.ReactNode => {
   const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
@@ -74,7 +74,7 @@ export const SelectComponent: React.FC<inputProps & selectProps> = ({
   name,
   _style,
   options,
-}): JSX.Element => {
+}): React.ReactNode => {
   const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };

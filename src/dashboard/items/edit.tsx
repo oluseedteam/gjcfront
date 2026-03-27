@@ -10,7 +10,7 @@ import { values } from "../../types";
 const EditItem: React.FC<{
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}> = ({ open, setOpen }): JSX.Element => {
+}> = ({ open, setOpen }): React.ReactNode => {
   const [values, setValues] = useState<values>({});
 
   const { setModalToggle, initialState } = useModal();
