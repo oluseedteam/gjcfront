@@ -8,7 +8,7 @@ import { ButtonComponent } from "../components/Tags/button";
 export const CancelComponent: React.FC<{
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}> = ({ open, setOpen }): React.ReactNode => {
+}> = ({ open, setOpen }) => {
   const { modalToggle, setModalToggle, initialState } = useModal();
 
   return (
@@ -41,7 +41,7 @@ export const CancelComponent: React.FC<{
 export const DoneComponent: React.FC<{
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}> = ({ open, setOpen }): React.ReactNode => {
+}> = ({ open, setOpen }) => {
   const { modalToggle, initialState, setModalToggle } = useModal();
 
   return (

@@ -26,6 +26,7 @@ const Layout: React.FC<layoutProp> = ({
         initial="initial"
         animate="animate"
         transition={transition}
+        className="md:flex overflow-y-hidden -z-10 md:bg-[#fffcf2]"
       >
         <section
           // style={{ backgroundImage: `url(${formBg})` }}

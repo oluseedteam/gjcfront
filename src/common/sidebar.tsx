@@ -14,7 +14,7 @@ import book2 from "../assets/book2.png";
 
 const Links = () => {
   const path = useLocation().pathname;
-  console.log(path);
+
 
   const icons = [
     <GoHomeFill />,

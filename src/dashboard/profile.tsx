@@ -55,7 +55,7 @@ const Profile = (): JSX.Element => {
       <section>
         <div className="flex  my-3 justify-between">
           <div className="relative">
-            <img src={profileImg} alt="profile image" />
+            <img src={profileImg} alt="profile" />
             <label
               className="absolute right-3 bottom-0"
               htmlFor="profile_image"

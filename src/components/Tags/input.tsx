@@ -9,7 +9,7 @@ export const InputComponent: React.FC<inputProps> = ({
   name,
   placeholder,
   _style,
-}): React.ReactNode => {
+}) => {
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
@@ -39,7 +39,7 @@ export const TextAreaComponent: React.FC<inputProps> = ({
   name,
   placeholder,
   _style,
-}): React.ReactNode => {
+}) => {
   const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
@@ -74,8 +74,8 @@ export const SelectComponent: React.FC<inputProps & selectProps> = ({
   name,
   _style,
   options,
-}): React.ReactNode => {
-  const handleChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+}) => {
+  const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
   return (
@@ -87,6 +87,9 @@ export const SelectComponent: React.FC<inputProps & selectProps> = ({
         className={`${_style}  border-[1px] rounded-md  shadow-none p-3 border-[#C2C2C2] text-sm outline-none`}
         value={values[name]}
         name={name}
+        onChange={(e) => {
+          handleChange(e);
+        }}
       >
         <option value="">Select a {label}</option>
         {options.map((data) => {

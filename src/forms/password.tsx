@@ -1,12 +1,12 @@
 import { InputComponent } from "../components/Tags/input";
 import { ButtonComponent } from "../components/Tags/button";
-import { useNavigate } from "react-router";
+
 import React, { useState } from "react";
 
 const PasswordComponent: React.FC<{
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }> = ({ setOpen }): JSX.Element => {
-  const navigate = useNavigate();
+
   const [values, setValues] = useState({});
   return (
     <div className="">

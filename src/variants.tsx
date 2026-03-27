@@ -10,7 +10,7 @@ export const navbarVariant = {
     y: 0,
     transition: {
       duration: 0.5,
-      type: "string",
+      type: "spring",
       mass: 0.01,
       damping: 2,
     },
@@ -55,7 +55,7 @@ export const sidebarVariant = {
     y: 0,
     transition: {
       duration: 0.5,
-      type: "string",
+      type: "spring",
       mass: 0.01,
       damping: 2,
     },
@@ -80,7 +80,7 @@ export const modalVariant = {
     y: 0,
     transition: {
       duration: 0.5,
-      type: "string",
+      type: "spring",
       mass: 0.01,
       damping: 2,
     },
@@ -108,7 +108,7 @@ export const scheduleVariant = {
     x: 0,
     transition: {
       duration: 0.5,
-      type: "string",
+      type: "spring",
       mass: 0.01,
       damping: 2,
     },
@@ -147,7 +147,7 @@ export const subLayoutVariant = {
 
 export const transition: Transition = {
   duration: 0.6,
-  type: "string",
+  type: "spring",
   mass: 0.01,
   damping: 1,
 };

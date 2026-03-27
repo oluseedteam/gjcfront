@@ -15,21 +15,13 @@ const Bookings = (): JSX.Element => {
     cancelled: "text-red-600",
   };
 
-  const FilterData = (): any[] => {
+  useEffect(() => {
     let data;
     if (status === "all") data = AllPickups;
     else {
-      data = AllPickups.filter((data, index) => {
-        return data.status.trim() === status;
-      });
+      data = AllPickups.filter((data) => data.status.trim() === status);
     }
-
-    return data;
-  };
-
-  useEffect(() => {
-    const response = FilterData();
-    setContents(response);
+    setContents(data);
   }, [status]);
 
   const renderData = contents.map((data, index) => {

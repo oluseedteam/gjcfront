@@ -7,13 +7,7 @@ import { useEffect, useState } from "react";
 const Users = (): JSX.Element => {
   const [status, setStatus] = useState("all");
   const [contents, setContents] = useState<any[]>(UsersData);
-  const statusColor: {
-    [key: string]: string;
-  } = {
-    pending: "text-blue-600",
-    successful: "text-primary",
-    cancelled: "text-red-600",
-  };
+
 
   const FilterData = (): any[] => {
     // let data;

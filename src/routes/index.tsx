@@ -74,10 +74,6 @@ const Routes = (): JSX.Element => {
           path: "admins",
           element: <Admins />,
         },
-        {
-          path: "users",
-          element: <Users />,
-        },
       ],
     },
   ];
