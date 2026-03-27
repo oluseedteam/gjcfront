@@ -18,7 +18,7 @@ const Layout: React.FC<layoutProp> = ({
   text,
   title,
   subTitle,
-}): React.ReactNode => {
+}) => {
   return (
     <>
       <motion.main
